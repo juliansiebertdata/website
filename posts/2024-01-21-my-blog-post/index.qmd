@@ -1,5 +1,5 @@
 ---
-title: "Using WebR"
+title: "New Horizons | Using WebR"
 description: "We will make WebR work to run R directly inside your browser."
 author:
   - name: Julian Siebert
@@ -28,6 +28,8 @@ filters:
 ---
 
 # Run R inside your browser
+
+***
 
 In this Blogpost I will show you how to use [WebR](https://docs.r-wasm.org/webr/latest/) inside your Quarto documents. WebR is a technology that allows us to run R directly inside our browser. This is a great way to share our analysis with others without the need to install R on their machine. They just need a browser and an internet connection. (It runs even on a smartphone)
 
@@ -180,7 +182,7 @@ You can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto
 ```
 </div>
 ````
-:::{.callout-important}
+:::{.callout-important icon="false"}
 Don´t embed an WebR Presentation inside a WebR Document. This will lead to strange behaviour. There should always be only one WebR instance per document.
 :::
 
