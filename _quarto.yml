@@ -19,7 +19,7 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - section: "A new world"
+      - section: "A new World"
         contents:
           - href: basic-tidydata.qmd
             text: The Planet of Data

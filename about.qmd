@@ -21,6 +21,20 @@ If you happen to be interested in these topics too, come along on my journey and
 
 ## Structure
 
+The Website is structured into different sections and chapters. You can navigate through the chapters using the navigation bar on the left side of the page. Fell free to explore and contact me if you have any questions or suggestions.
+
+About
+: This is the section you are currently reading. It contains some general information about the idea behind and the structure of this website.
+
+A new world
+: In this section we will explore some of the basics of working with data in various forms. It is by no means a complete guide to data science, but it will enable us to work with real data. For example, the spreadsheet your colleague sends you to analyse.
+(If you are just starting out, I highly recommend the book [R for Data Science](https://r4ds.hadley.nz/) by H. Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund) @hadley2024
+
+First Steps
+: Having explored the world of data, we make our first steps towards extracting meaningful information from it. We will learn how to use the R programming language to analyse data and create visualisations. Therefor we use the R package `tidyverse`, a collection of packages designed for data science. In the second part of this section, we'll explore what can happen if we don't pay attention to the details of our data, and how we can avoid these problems.
+
+Expeditions
+: This is where I discuss topics and particular use cases that I stumble upon. It is a collection of notes, real world examples and thoughts on various topics in a blog format.
 
 
 ## Meet the team
@@ -45,7 +59,7 @@ Fortunately, we don't have to travel alone. I'm lucky to have a great team of pe
 Mixup of "Nein" (german for "No") and "Einhorn" (german for "Unicorn") 
 The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by *Marc-Uwe Klings Book* "Das NEINhorn" @kling2021
 
-Das NEINhorn, Icon created by *Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons [(Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)
+Das NEINhorn, Icon created by *Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons* [(Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)
 :::
 :::
 

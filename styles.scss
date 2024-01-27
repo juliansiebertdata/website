@@ -73,6 +73,13 @@ h3 {
 
 /* ------- class selectors ------- */
 
+// change color of blockquotes
+
+blockquote {
+    border-color: rgb(168, 165, 162);
+}
+
+
 // size up the next page elements
 @media (min-width: 992px) {
 
