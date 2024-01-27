@@ -1,1 +1,1 @@
-{"entries":[],"headings":["my-blog-post"]}
+{"headings":["run-r-inside-your-browser","setup-webr-in-quarto","using-packages","hiding-and-executing-code","include-advise-on-how-to-execute-code","webr-revealjs-slides"],"options":{"custom":["vidfloatVideo"]},"entries":[{"order":{"section":[1,3,0,0,0,0,0],"number":1},"caption":"Context Options for WebR","key":"tbl-context"},{"order":{"section":[1,0,0,0,0,0,0],"number":1},"caption":"“WebR R in the Browser” by the Coatless Professor.","key":"vid-webr"}]}

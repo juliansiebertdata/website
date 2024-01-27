@@ -1,26 +1,221 @@
 ---
-title: "blog post title"
-description: "blog post description (appears underneath the title in smaller text) which is included on the listing page"
+title: "New Horizons | Using WebR"
+description: "We will make WebR work to run R directly inside your browser."
 author:
   - name: Julian Siebert
-    url: https://juliansiebert.github.io/ # (your website)
-    orcid: 0000-0000-0000-0000 # (if available)
-    affiliation: Bio Data Science @ Hoschschule Osnabrück & Company
-    affiliation-url: https://company.github.io/ 
-date: 01-21-2024
-date-modified: 01-21-2024
-categories: [Quarto, R, Blog] # self-defined categories (hash tags)
+    url: https://juliansiebert.github.io/website/ # (your website)
+    #orcid: 0000-0000-0000-0000 # (if available)
+    affiliation: Working Student @ Seedforward
+    #affiliation-url: https://seedforward.de/ # (company website)
+date: 01-27-2024
+date-modified: 01-27-2024
+categories: [WebR, Quarto, R] # self-defined categories (hash tags)
 citation: 
-  url: https://juliansiebert.github.io/posts/2024-01-21-my-blog-post/ 
-image: preview-image.png # (image of your blog post)
+  url: https://juliansiebert.github.io/website/posts/2024-01-21-my-blog-post/ 
+image: images/webR-vignette.png # (image of your blog post)
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 sidebar: false
-bibliography: references.bib
+#bibliography: references.bib
 reference-location: margin
 citation-location: margin
 citations-hover: true
+
+engine: knitr
+webr: 
+    channel-type: 'post-message'
+    packages: ["dplyr", "ggplot2", "palmerpenguins"]
+filters:
+  - webr
 ---
 
-# My Blog Post
+# Run R inside your browser
 
-This is the content of my blog post. It is written in markdown and can include code chunks.
+***
+
+In this Blogpost I will show you how to use [WebR](https://docs.r-wasm.org/webr/latest/) inside your Quarto documents. WebR is a technology that allows us to run R directly inside our browser. This is a great way to share our analysis with others without the need to install R on their machine. They just need a browser and an internet connection. (It runs even on a smartphone)
+
+To start and install WebR inside our Quarto document use the **very short** manual at the GitHub page of [Coatless Professor](https://github.com/coatless/quarto-webr).
+
+He´s even writing a Book about WebR in Quarto right now which you can find [here](https://quarto-webr.thecoatlessprofessor.com/).
+
+Or you watch this Youtube Video from the Coatless Professor.
+
+::: {#vid-webr}
+
+{{< video https://www.youtube.com/watch?v=DoRR2S5lLvk&t=5s >}}
+
+"WebR R in the Browser" by the Coatless Professor.
+
+:::
+
+::: {.definitionbox}
+:::: {.definitionbox-header}
+::::: {.definitionbox-icon}
+:::::
+Definition:
+WebR technology.
+::::
+> WebR uses a technology called [WebAssembly](https://webassembly.org/) to run R inside the browser. It´s basically a very fast and small virtual machine. Using this your browser sets up a instance of R and runs your code inside this instance. We will discuss Pros and Cons later.
+:::
+
+## Setup WebR in Quarto
+
+I recommend taking the steps above to install WebR in your Quarto project. While this Blog Post and the Video might become outdated, the GitHub page of the Coatless Professor will probably always be up to date. I will store the information here for the sake of completeness.
+
+First we need to install the quarto-webr extension for Quarto inside our Quarto Project. This step needs to be repeated for every Quarto Project you want to use WebR in. Run the following Code inside your **Terminal**.
+
+```{bash eval=FALSE}
+quarto add coatless/quarto-webr
+```
+
+Now we add the following lines to the YAML header of our Quarto document. Alternatively you can specify this in your "_quarto.yml" file to make WebR available for all documents inside your Quarto Project.
+
+```{.yaml filename="your_file.qmd" eval=FALSE}
+---
+engine: knitr
+filters:
+  - webr
+---
+```
+
+If you followed the examples above you should be able to use the following code chunk to load the `mtcars` dataset and fit the `mpg` against the `wt` variable using base R.
+
+```{webr-r}
+
+fit <- lm(mpg ~ wt, data = mtcars)
+
+summary(fit)
+
+```
+
+
+## Using Packages
+
+Beacause WebR uses a technology called [WebAssembly](https://webassembly.org/) you cannot simply use every package inside the R ecosystem easily. But you can have a look at the [WebR Package Repository](https://repo.r-wasm.org/) to see which packages are available.
+
+If you want to use a package inside WebR it is as easy as adding the package name to the `webr` field in the YAML header of your Quarto document.
+
+```{.yaml filename="your_file.qmd" eval=FALSE}
+---
+format: html
+engine: knitr
+webr: 
+    packages: ["dplyr", "ggplot2"]
+filters:
+  - webr
+---
+```
+
+You could also use the `webr::install()` function to install packages inside your Quarto document. But the above method is to be preferred because it is faster and more reliable. [See here](https://quarto-webr.thecoatlessprofessor.com/qwebr-using-r-packages.html) for more information.
+
+But if you want to use a package in only one code cell it can be more efficient to make a inline call like this.
+
+```{r eval=FALSE}
+webr::install("dplyr")
+```
+
+And then use the package in the next code cell.
+
+```{webr-r}
+
+library(dplyr)
+
+glimpse(mtcars)
+
+```
+
+## Hiding and executing Code
+
+WebR provides a way to hide code cells and execute them later. This can be useful if you want to hide the code cells from the user to focus on the analysis or output.
+
+Therefor you specify a `quarto-webr` cell option called `context`. There are three different contexts available.
+
+| `quarto-webr` Context   | Quarto Cell Option | Description                                    |
+|-------------------------|--------------------|------------------------------------------------|
+| `interactive` (default) | `include: true`    | Show both code and results                     |
+| `output`                | `echo: false`      | Suppress showing code, but display the results |
+| `setup`                 | `include: false`   | Suppress showing both code and results         |
+
+:Context Options for WebR {#tbl-context}
+
+For example you want to load packages and datasets in the background without showing to not distract the reader from the analysis.
+
+```{{webr-r}}
+#| context: setup
+webr::install("palmerpenguins")
+library(palmerpenguins)
+```
+
+```{webr-r}
+
+glimpse(penguins)
+
+```
+
+### Include advise on how to execute code
+
+This is how you can execute the Code inside the Code Cells provided by WebR. 
+
+- Run selected code (Per Line execution):
+  - macOS: <kbd>⌘</kbd> + <kbd>↩/Return</kbd>
+  - Windows/Linux: <kbd>strg</kbd> + <kbd>↩/Enter</kbd>
+
+- To run the entire code cell, you can simply click the "Run code" button, or use the keyboard shortcut:
+  - <kbd>Shift</kbd> + <kbd>↩</kbd>
+
+
+## WebR RevealJS Slides
+
+We can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto Documents. This is how we can do it.
+
+````html
+<style>
+.slide-deck {
+    border: 3px solid #dee2e6;
+    width: 100%;
+    height: 475px;
+}
+</style>
+
+<div>
+```{=html}
+<iframe class="slide-deck" src="path/to/presentation/"></iframe>
+```
+</div>
+````
+:::{.callout-important icon="false"}
+Don´t embed an WebR Presentation inside a WebR Document. This will lead to strange behaviour. There should always be only one WebR instance per document.
+:::
+
+## Communication Channels
+
+WebR needs to communicate between the browser and the R instance. There are several available. Each with there own set of advantages and disadvantages. 
+
+Because i deploy this website using github pages i have to use the `channel-type: "post-message"` which is actually less secure and slower than the default `channel-type: "shared-array"`.
+
+```{.yaml filename="your_file.qmd" eval=FALSE}
+---
+title: "Setting Up webR to use the PostMessage Channel"
+format: html
+webr:
+  channel-type: "post-message"
+filters:
+- webr
+---
+```
+
+## Deployment 
+
+The [WebR documentation](https://quarto-webr.thecoatlessprofessor.com/qwebr-deployment-templates.html) gives examples on how to setup WebR for different deployment scenarios like RevealJS, Websites on GitHub Pages, etc.
+
+There is also a [example Website](https://quarto-webr.thecoatlessprofessor.com/examples/website/) which shows how to setup WebR for a Website. The source code can be found in the [GitHub Repository](https://github.com/coatless/quarto-webr/tree/main/examples/website).
+
+For troubleshooting later on [here](https://quarto-webr.thecoatlessprofessor.com/qwebr-extension-website.html)
+
+::: {.callout-note icon="false"}
+
+## Create Link in Powershell
+
+The code provide by the Coatless Professor is for Linux and MacOS. If you want to use it in Windows you have to change the code to `cmd /c mklink /D _extensions ..\_extensions` assuming you are in the root/docs folder of your quarto project.
+
+:::
