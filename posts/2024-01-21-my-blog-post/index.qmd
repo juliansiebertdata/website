@@ -161,7 +161,7 @@ This is how you can execute the Code inside the Code Cells provided by WebR.
   - <kbd>Shift</kbd> + <kbd>↩</kbd>
 
 
-## Embed WebR RevealJS Slide inside Quarto Website etc
+## WebR RevealJS Slides
 
 You can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto Documents. This is how you do it.
 
@@ -183,3 +183,4 @@ You can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto
 :::{.callout-important}
 Don´t embed an WebR Presentation inside a WebR Document. This will lead to strange behaviour. There should always be only one WebR instance per document.
 :::
+
