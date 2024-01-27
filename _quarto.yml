@@ -3,6 +3,9 @@ project:
   output-dir: docs
 
 website:
+  repo-url: https://github.com/juliansiebertdata/website
+  repo-actions: issue
+  repo-subdir: "docs"
   page-navigation: true
   back-to-top-navigation: true
   favicon: "images/outlier-favicon.png"
@@ -57,5 +60,11 @@ resources:
   - "/images*"
   - "/web-elements*"
   - "/icons*"
+
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: Video
+      key: vid
 
 
