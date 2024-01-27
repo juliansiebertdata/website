@@ -36,7 +36,7 @@
     "section": "",
     "text": "Data comes in many shapes and forms (yes even colors). In this section we will get into the world of data to explore and understand it.\nThe most common living place of data you will come across is the spreadsheet. Since the introduction of the spreadsheet in the 1980s, it has become the most common way to store data. Sadly for us, and the data itself, it is also the most common way to store data in a way that is not useful for analysis. We will get into that later.",
     "crumbs": [
-      "A new world",
+      "A new World",
       "The Planet of Data"
     ]
   },
@@ -47,7 +47,7 @@
     "section": "Kind of Data",
     "text": "Kind of Data\nhttps://allisonhorst.com/everything-else",
     "crumbs": [
-      "A new world",
+      "A new World",
       "The Planet of Data"
     ]
   },
@@ -58,7 +58,7 @@
     "section": "Habitats of Data",
     "text": "Habitats of Data",
     "crumbs": [
-      "A new world",
+      "A new World",
       "The Planet of Data"
     ]
   },
@@ -69,7 +69,7 @@
     "section": "Forms of Data",
     "text": "Forms of Data",
     "crumbs": [
-      "A new world",
+      "A new World",
       "The Planet of Data"
     ]
   },
@@ -98,7 +98,7 @@
     "href": "about.html#structure",
     "title": "Welcome",
     "section": "Structure",
-    "text": "Structure",
+    "text": "Structure\nThe Website is structured into different sections and chapters. You can navigate through the chapters using the navigation bar on the left side of the page. Fell free to explore and contact me if you have any questions or suggestions.\n\nAbout\n\nThis is the section you are currently reading. It contains some general information about the idea behind and the structure of this website.\n\nA new world\n\nIn this section we will explore some of the basics of working with data in various forms. It is by no means a complete guide to data science, but it will enable us to work with real data. For example, the spreadsheet your colleague sends you to analyse. (If you are just starting out, I highly recommend the book R for Data Science by H. Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund) Hadley Wickham (n.d.)\n\nFirst Steps\n\nHaving explored the world of data, we make our first steps towards extracting meaningful information from it. We will learn how to use the R programming language to analyse data and create visualisations. Therefor we use the R package tidyverse, a collection of packages designed for data science. In the second part of this section, we’ll explore what can happen if we don’t pay attention to the details of our data, and how we can avoid these problems.\n\nExpeditions\n\nThis is where I discuss topics and particular use cases that I stumble upon. It is a collection of notes, real world examples and thoughts on various topics in a blog format.",
     "crumbs": [
       "About"
     ]
@@ -108,7 +108,7 @@
     "href": "about.html#meet-the-team",
     "title": "Welcome",
     "section": "Meet the team",
-    "text": "Meet the team\nFortunately, we don’t have to travel alone. I’m lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by *Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)",
+    "text": "Meet the team\nFortunately, we don’t have to travel alone. I’m lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)",
     "crumbs": [
       "About"
     ]
