@@ -22,6 +22,7 @@ citations-hover: true
 
 engine: knitr
 webr: 
+    channel-type: 'post-message'
     packages: ["dplyr", "ggplot2", "palmerpenguins"]
 filters:
   - webr
@@ -165,7 +166,7 @@ This is how you can execute the Code inside the Code Cells provided by WebR.
 
 ## WebR RevealJS Slides
 
-You can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto Documents. This is how you do it.
+We can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto Documents. This is how we can do it.
 
 ````html
 <style>
@@ -186,3 +187,35 @@ You can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto
 Don´t embed an WebR Presentation inside a WebR Document. This will lead to strange behaviour. There should always be only one WebR instance per document.
 :::
 
+## Communication Channels
+
+WebR needs to communicate between the browser and the R instance. There are several available. Each with there own set of advantages and disadvantages. 
+
+Because i deploy this website using github pages i have to use the `channel-type: "post-message"` which is actually less secure and slower than the default `channel-type: "shared-array"`.
+
+```{.yaml filename="your_file.qmd" eval=FALSE}
+---
+title: "Setting Up webR to use the PostMessage Channel"
+format: html
+webr:
+  channel-type: "post-message"
+filters:
+- webr
+---
+```
+
+## Deployment 
+
+The [WebR documentation](https://quarto-webr.thecoatlessprofessor.com/qwebr-deployment-templates.html) gives examples on how to setup WebR for different deployment scenarios like RevealJS, Websites on GitHub Pages, etc.
+
+There is also a [example Website](https://quarto-webr.thecoatlessprofessor.com/examples/website/) which shows how to setup WebR for a Website. The source code can be found in the [GitHub Repository](https://github.com/coatless/quarto-webr/tree/main/examples/website).
+
+For troubleshooting later on [here](https://quarto-webr.thecoatlessprofessor.com/qwebr-extension-website.html)
+
+::: {.callout-note icon="false"}
+
+## Create Link in Powershell
+
+The code provide by the Coatless Professor is for Linux and MacOS. If you want to use it in Windows you have to change the code to `cmd /c mklink /D _extensions ..\_extensions` assuming you are in the root/docs folder of your quarto project.
+
+:::
