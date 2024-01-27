@@ -1,0 +1,18 @@
+---
+title: "Stumbling blocks"
+---
+
+
+## What are you Hiding?
+
+### Barplots
+https://allisonhorst.com/everything-else
+
+Document for Jochen. (boxplot) aufarbeiten
+
+### Improve Boxplots
+
+
+### Confounder Analysis and the Simpson`s Paradox
+
+Folien von M. Rundel  https://datasciencebox.org/02-exploring-data

@@ -1,0 +1,26 @@
+---
+title: "blog post title"
+description: "blog post description (appears underneath the title in smaller text) which is included on the listing page"
+author:
+  - name: Julian Siebert
+    url: https://juliansiebert.github.io/ # (your website)
+    orcid: 0000-0000-0000-0000 # (if available)
+    affiliation: Bio Data Science @ Hoschschule Osnabrück & Company
+    affiliation-url: https://company.github.io/ 
+date: 01-21-2024
+date-modified: 01-21-2024
+categories: [Quarto, R, Blog] # self-defined categories (hash tags)
+citation: 
+  url: https://juliansiebert.github.io/posts/2024-01-21-my-blog-post/ 
+image: preview-image.png # (image of your blog post)
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+sidebar: false
+bibliography: references.bib
+reference-location: margin
+citation-location: margin
+citations-hover: true
+---
+
+# My Blog Post
+
+This is the content of my blog post. It is written in markdown and can include code chunks.

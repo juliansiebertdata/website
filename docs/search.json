@@ -1,0 +1,146 @@
+[
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Expeditions",
+    "section": "",
+    "text": "blog post title\n\n\n\nQuarto\n\n\nR\n\n\nBlog\n\n\n\nblog post description (appears underneath the title in smaller text) which is included on the listing page\n\n\n\nJulian Siebert\n\n\nJan 21, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Expeditions"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "I am Student at the University of Applied Sciences in Osnabrück, Germany with a focus on Data Science for biological research where I am currently writing on my Bachelor Thesis in the field of Quantile Regression.\nProfessionally, I am a Working Student at a young biotechnology company called SeedForward GmbH where i support the F&E Team with statistics and field trial management.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#julian-siebert",
+    "href": "index.html#julian-siebert",
+    "title": "",
+    "section": "",
+    "text": "I am Student at the University of Applied Sciences in Osnabrück, Germany with a focus on Data Science for biological research where I am currently writing on my Bachelor Thesis in the field of Quantile Regression.\nProfessionally, I am a Working Student at a young biotechnology company called SeedForward GmbH where i support the F&E Team with statistics and field trial management.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "basic-tidydata.html",
+    "href": "basic-tidydata.html",
+    "title": "The Planet of Data",
+    "section": "",
+    "text": "Data comes in many shapes and forms (yes even colors). In this section we will get into the world of data to explore and understand it.\nThe most common living place of data you will come across is the spreadsheet. Since the introduction of the spreadsheet in the 1980s, it has become the most common way to store data. Sadly for us, and the data itself, it is also the most common way to store data in a way that is not useful for analysis. We will get into that later.",
+    "crumbs": [
+      "A new world",
+      "The Planet of Data"
+    ]
+  },
+  {
+    "objectID": "basic-tidydata.html#kind-of-data",
+    "href": "basic-tidydata.html#kind-of-data",
+    "title": "The Planet of Data",
+    "section": "Kind of Data",
+    "text": "Kind of Data\nhttps://allisonhorst.com/everything-else",
+    "crumbs": [
+      "A new world",
+      "The Planet of Data"
+    ]
+  },
+  {
+    "objectID": "basic-tidydata.html#habitats-of-data",
+    "href": "basic-tidydata.html#habitats-of-data",
+    "title": "The Planet of Data",
+    "section": "Habitats of Data",
+    "text": "Habitats of Data",
+    "crumbs": [
+      "A new world",
+      "The Planet of Data"
+    ]
+  },
+  {
+    "objectID": "basic-tidydata.html#forms-of-data",
+    "href": "basic-tidydata.html#forms-of-data",
+    "title": "The Planet of Data",
+    "section": "Forms of Data",
+    "text": "Forms of Data",
+    "crumbs": [
+      "A new world",
+      "The Planet of Data"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Knowledge is an unending adventure at the edge of uncertainty. - Jacob Bronowski\nHere we are. My first Quarto website. For now, I’m going to use it as a place to put my notes and thoughts, to save them for later and share them with you. I’m not sure what I’ll do with it in the future, but I’m sure I’ll figure it out as I go.\nIf you have stumbled upon this site somehow, I hope you find something useful. But keep in mind that this is a work in progress. Right now I am writing my bachelor thesis in Data Science for Biology. So there’s still a lot to learn and I’ll make mistakes along the way.\nAs I’m not a native English speaker, there will be a lot of mistakes in my writing. I’m sorry for that. I’m trying to improve my English and I hope you can bear with me.\nThe program I use to write this is called Quarto. It’s a great tool for writing reproducible documents, presentations, websites, manuscripts and more. If you want to know more about Quarto, check out the great documentation website.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#topics",
+    "href": "about.html#topics",
+    "title": "Welcome",
+    "section": "Topics",
+    "text": "Topics\nI am currently working as a working student in the R&D team of a young biotech start-up. I’m also a student of plant sciences at the University of Applied Sciences in Osnabrück, Germany. Reproducible research, data science and plant biology are my main interests and these are the topics I will mostly write about.\nIf you happen to be interested in these topics too, come along on my journey and let’s see where it takes us.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#meet-the-team",
+    "href": "about.html#meet-the-team",
+    "title": "Welcome",
+    "section": "Meet the team",
+    "text": "Meet the team\nFortunately, we don’t have to travel alone. I’m lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by *Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "advanced-eda.html",
+    "href": "advanced-eda.html",
+    "title": "Stumbling blocks",
+    "section": "",
+    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data",
+    "crumbs": [
+      "First Steps",
+      "Stumbling blocks"
+    ]
+  },
+  {
+    "objectID": "advanced-eda.html#what-are-you-hiding",
+    "href": "advanced-eda.html#what-are-you-hiding",
+    "title": "Stumbling blocks",
+    "section": "",
+    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data",
+    "crumbs": [
+      "First Steps",
+      "Stumbling blocks"
+    ]
+  },
+  {
+    "objectID": "basics-eda.html",
+    "href": "basics-eda.html",
+    "title": "There was light",
+    "section": "",
+    "text": "In this section we will start our journey to bring light inside the world of data. We will do this by performing some basic data analysis and visualization. A step which is offen referred to as exploratory data analysis (EDA).\nLuckily we have a toolset at our hand called the grammar of graphics (ggplot).\nWe will use the tidyverse suite of packages for this. The tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The tidyverse is designed to make it easy to install and load core packages from the tidyverse in a single command. The packages in the tidyverse have been designed to work together naturally. This means that you can fluidly move from one package to another. For example, you might start with dplyr to manipulate your data, then ggplot2 to plot it, then gganimate to animate it.\n\n\n\n Back to top",
+    "crumbs": [
+      "First Steps",
+      "There was light"
+    ]
+  },
+  {
+    "objectID": "posts/2024-01-21-my-blog-post/index.html",
+    "href": "posts/2024-01-21-my-blog-post/index.html",
+    "title": "blog post title",
+    "section": "",
+    "text": "My Blog Post\nThis is the content of my blog post. It is written in markdown and can include code chunks.\n\n\n\n\n Back to topCitationBibTeX citation:@online{siebert2024,\n  author = {Siebert, Julian},\n  title = {Blog Post Title},\n  date = {2024-01-21},\n  url = {https://juliansiebert.github.io/posts/2024-01-21-my-blog-post/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nSiebert, Julian. 2024. “Blog Post Title.” January 21, 2024.\nhttps://juliansiebert.github.io/posts/2024-01-21-my-blog-post/."
+  }
+]

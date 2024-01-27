@@ -1,0 +1,477 @@
+/*-- scss:defaults --*/
+
+// Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+// Colors
+$dark-green: #53b57f;
+$darker-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$light-gray: #f6f6f6;
+$purple: #9158A2;
+$orange: #ad7237;
+$dark-grey: rgb(168, 165, 162);
+
+// Base document colors
+$sidebar-bg: $dark-grey; // navbar
+$sidebar-fg: $gray; // navbar foreground elements
+$sidebar-hl: $dark-green; // highlight color when hovering over navbar links
+$navbar-bg: $dark-grey; // navbar background
+$body-bg: $cream; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $dark-grey; // footer 
+$link-color: $dark-green; // hyperlinks 
+$code-bg: $light-gray; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $light-gray; // code block background color
+//$code-block-border-left: $dark-green; // code block left border color
+
+// Code copy
+$btn-code-copy-color: $purple; // code copy button color
+
+// toc
+$toc-font-size: 0.9em; // toc font size
+$toc-inactive-border: $gray;
+$sidebar-font-size: 1.1em; // sidebar font size
+$toc-font-style: bold; // 
+
+
+/*-- scss:rules --*/
+
+:is(h1, h2, h3, h4, h5, h6) {
+    color: #858e79;
+}
+
+h1.title {
+    letter-spacing: 2.5px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title .title {
+    margin-bottom: 1em;
+}
+
+h2 {
+    letter-spacing: 1px;
+    margin-bottom: 1.05em;
+    margin-top: 2.5em;
+}
+
+main.content>section:first-of-type>h2:first-child {
+    margin-top: 2.5em;
+}
+
+h3 {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: .5rem;
+}
+
+/* ------- class selectors ------- */
+
+// size up the next page elements
+@media (min-width: 992px) {
+
+    .sidebar-navigation .sidebar-section .sidebar-item {
+        font-size: 0.9rem;
+    }
+}
+
+.nav-page .nav-page-text {
+    font-size: 1.05rem;
+    color: $darker-green;
+}
+
+// move inline nav link to the top to better align with text and let it react to hover
+
+a[href="mailto:ju.siebert@live.de?&subject=Feedback for your book&body=Add what you want to suggest"] {
+    :hover {
+        font-size: 1.5rem;
+    }
+}
+
+.about-link {
+    :hover {
+        font-size: 0.85rem;
+    }
+}
+
+a[href="https://seedforward.com/de/home/"] {
+
+    :hover {
+        font-size: 1.5rem;
+    }
+}
+
+// change appearance of worker names
+.co-name {
+    color: $darker-green;
+    font-weight: bold;
+    font-size: 1.18rem;
+    letter-spacing: 1.2px;
+    font-family: Poppins;
+    margin-bottom: -1em;
+    margin-left: -0.1em;
+}
+
+// change appearance of article links
+p>a {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(83, 181, 127, 0.4);
+    text-decoration: none;
+    color: #64605f;
+}
+
+// maximize size of Materials under the toc (Other Links)
+
+.sidebar .quarto-other-links ul {
+    font-size: 1rem;
+    color: $darker-green;
+    font-family: Poppins;
+    margin-left: 1.2em;
+    margin-top: 0.5em;
+}
+
+.sidebar .quarto-other-links>h2 {
+    font-size: 1.2rem;
+    margin-left: 0.8em;
+    margin-top: 1em;
+    border-top-width: 2px;
+    border-top-color: rgb(83, 181, 127);
+}
+
+.sidebar .quarto-other-links i {
+    font-size: 1.5rem;
+    color: #858E79;
+}
+
+.sidebar .quarto-other-links ul li {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+// change appearance of toc
+
+.sidebar nav[role="doc-toc"]>h2 {
+    font-size: 1.2rem;
+}
+
+
+/* ------- custom callout boxes ------- */
+
+// --------------solutionbox
+.solutionbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .25rem;
+    border-left: solid #acacac .3rem;
+    border-right: solid 0.5px silver;
+    border-top: solid 0.5px silver;
+    border-bottom: solid 0.5px silver;
+    border-left-color: #9834eb !important;
+}
+
+.solutionbox>p {
+    padding-bottom: .5rem;
+    //padding-top: .5rem;
+    padding-left: .5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    font-family: Roboto;
+}
+
+.solutionbox-icon {
+    // height: 0.8rem;
+    // width: 0.8rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+    margin-top: .5rem;
+    padding-right: 1.25rem;
+    background-image: url('icons/tools.svg');
+}
+
+.solutionbox-header {
+    //margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    background-color: #f5e8ff;
+    height: 2em;
+    overflow: hidden;
+}
+
+.solutionbox-header p {
+    padding-top: 0.2em;
+}
+
+.solutionbox-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.solutionbox-body> :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+//---------------- constructionbox
+.constructionbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .25rem;
+    border-left: solid #acacac .3rem;
+    border-right: solid 0.5px silver;
+    border-top: solid 0.5px silver;
+    border-bottom: solid 0.5px silver;
+    border-left-color: rgb(255, 144, 64) !important;
+}
+
+.constructionbox>p {
+    padding-bottom: .5rem;
+    //padding-top: .5rem;
+    padding-left: .5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    font-family: Roboto;
+}
+
+.constructionbox-icon {
+    // height: 0.8rem;
+    // width: 0.8rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+    margin-top: .5rem;
+    padding-right: 1.25rem;
+    background-image: url('icons/cone-striped.svg');
+}
+
+.constructionbox-header {
+    //margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    background-color: rgba(255, 144, 64, 0.2);
+    height: 2em;
+    overflow: hidden;
+}
+
+.constructionbox-header p {
+    padding-top: 0.2em;
+}
+
+.constructionbox-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.constructionbox-body> :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+
+//---------------- definitionbox
+.definitionbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .25rem;
+    border-left: solid #acacac .3rem;
+    border-right: solid 0.5px silver;
+    border-top: solid 0.5px silver;
+    border-bottom: solid 0.5px silver;
+    border-left-color: #e5decf !important;
+}
+
+.definitionbox>p {
+    padding-bottom: .5rem;
+    //padding-top: .5rem;
+    padding-left: .5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    font-family: Roboto;
+}
+
+.definitionbox-icon {
+    // height: 0.8rem;
+    // width: 0.8rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+    margin-top: .5rem;
+    padding-right: 1.25rem;
+    background-image: url('icons/journal-bookmark-fill.svg');
+}
+
+.definitionbox-header {
+    //margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    background-color: #eee7d7;
+    height: 2em;
+    overflow: hidden;
+}
+
+.definitionbox-header p {
+    padding-top: 0.2em;
+}
+
+.definitionbox-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+}
+
+.definitionbox-body> :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+.definitionbox .blockquote {
+    border-left: 0.25rem solid #e5decf;
+    padding-left: 0.5rem;
+    margin-left: 1rem !important;
+}
+
+
+
+//---------------- burningbox (with background color)
+.burningbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: .25rem;
+    border-left: solid #acacac .3rem;
+    border-right: solid 0.5px silver;
+    border-top: solid 0.5px silver;
+    border-bottom: solid 0.5px silver;
+    border-left-color: #e13238 !important;
+    background-color: #ffebec;
+}
+
+.burningbox>p {
+    padding-bottom: .5rem;
+    //padding-top: .5rem;
+    padding-left: .5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    font-family: Roboto;
+}
+
+.burningbox>p>code {
+    background-color: rgba(250, 56, 62, .15);
+    border-top-width: 0.1rem;
+    border-right-width: 0.1rem;
+    border-bottom-width: 0.1rem;
+    border-left-width: 0.1rem;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(0, 0, 0, 0.1);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    vertical-align: middle;
+    color: #64605f;
+}
+
+.burningbox-icon {
+    // height: 0.8rem;
+    // width: 0.8rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+    margin-top: .5rem;
+    padding-bottom: .8rem;
+    padding-right: 1.25rem;
+    background-image: url('icons/fire.svg');
+}
+
+.burningbox-header {
+    //margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: flex;
+    background-color: rgba(250, 56, 62, .25);
+    height: 2em;
+    overflow: hidden;
+}
+
+.burningbox-header p {
+    padding-top: 0.2em;
+}
+
+.burningbox-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.burningbox-body> :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+
+
+/* ------- custom collapsible callout boxes ------- */
+
+
+
+
+/* ------- insert HTML´s ------- */

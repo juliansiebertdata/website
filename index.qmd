@@ -1,0 +1,33 @@
+---
+title: "" # if using a built-in template, this title appears under your photo
+image: "images/js.jpg" # great spot for your professional headshot :) 
+toc: false # remove "On this page" table of contents
+sidebar: false # remove sidebar from this page
+
+about: 
+  template: jolla # see other templates at https://quarto.org/docs/websites/website-about.html#templates
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: github
+      text: Website
+      href: https://github.com/juliansiebertdata
+    - icon: linkedin 
+      text: LinkedIn
+      href: https://www.linkedin.com/in/julian-siebert-73b438249
+    - icon: envelope
+      text: Email
+      href: mailto:ju.siebert@live.de
+
+include-in-header: "web-elements/header.html"
+resources: 
+  - mydocuments/cv-juliansiebert.pdf
+---
+
+## Julian Siebert
+
+I am Student at the University of Applied Sciences in Osnabrück, Germany with a focus on Data Science for biological research where I am currently writing on my Bachelor Thesis in the field of Quantile Regression.
+
+Professionally, I am a Working Student at a young biotechnology company called [SeedForward GmbH](https://www.seedforward.de) where i support the F&E Team with statistics and field trial management.<br>
+
+

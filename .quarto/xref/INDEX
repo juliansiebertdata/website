@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "6b0ded22"
+  },
+  "posts/2024-01-21-my-blog-post/index.qmd": {
+    "index.html": "3be98db4"
+  },
+  "about.qmd": {
+    "about.html": "4a23e357"
+  },
+  "posts.qmd": {
+    "posts.html": "14d5fc65"
+  },
+  "basic-tidydata.qmd": {
+    "basic-tidydata.html": "a99d59e6"
+  },
+  "basics-eda.qmd": {
+    "basics-eda.html": "2b497270"
+  },
+  "advanced-eda.qmd": {
+    "advanced-eda.html": "b0b2a610"
+  }
+}

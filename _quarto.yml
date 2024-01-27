@@ -1,0 +1,61 @@
+project:
+  type: website
+  #output-dir: docs
+
+website:
+  page-navigation: true
+  back-to-top-navigation: true
+  favicon: "images/outlier-favicon.png"
+  open-graph: true
+  search:
+      location: sidebar
+      type: textbox
+  sidebar:
+    style: "floating"
+    logo: "images/outlier-logo.png"
+    title: "Agricultural Research"
+    contents: 
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - section: "A new world"
+        contents:
+          - href: basic-tidydata.qmd
+            text: The Planet of Data
+      - section: "First Steps"
+        contents:
+          - href: basics-eda.qmd
+            text: There was light
+          - href: advanced-eda.qmd
+            text: Stumbling blocks
+      - posts.qmd
+  page-footer: 
+    left: "Agricultural Research is a web-project by Julian Siebert." 
+    right: 
+      - text: "Give Feedback and Critic"
+      - icon: envelope-at
+        href: mailto:ju.siebert@live.de?&subject=Feedback for your book&body=Add what you want to suggest
+      - text: "| Github"
+      - icon: github
+        href: https://github.com/juliansiebertdata/
+  reader-mode: false
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    mainfont: "Roboto"
+    toc: true
+    toc-title: "On this page"
+    toc-expand: true
+    embed-resources: true
+    link-external-newwindow: true
+    include-in-header: "web-elements/progressbar.html"
+    #citation-location: margin
+
+resources: 
+  - "/images*"
+  - "/web-elements*"
+  - "/icons*"
+
+

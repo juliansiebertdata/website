@@ -1,0 +1,72 @@
+---
+title: Welcome
+bibliography: references.bib
+---
+
+> Knowledge is an unending adventure at the edge of uncertainty. - Jacob Bronowski
+
+Here we are. My first Quarto website. For now, I'm going to use it as a place to put my notes and thoughts, to save them for later and share them with you. I'm not sure what I'll do with it in the future, but I'm sure I'll figure it out as I go.
+
+If you have stumbled upon this site somehow, I hope you find something useful. But keep in mind that this is a work in progress. Right now I am writing my bachelor thesis in Data Science for Biology. So there's still a lot to learn and I'll make mistakes along the way.
+
+As I'm not a native English speaker, there will be a lot of mistakes in my writing. I'm sorry for that. I'm trying to improve my English and I hope you can bear with me.
+
+The program I use to write this is called [Quarto](https://quarto.org/). It's a great tool for writing reproducible documents, presentations, websites, manuscripts and more. If you want to know more about Quarto, check out the great [documentation](https://quarto.org/docs/) website.
+
+## Topics
+
+I am currently working as a working student in the R&D team of a young biotech start-up. I'm also a student of plant sciences at the University of Applied Sciences in Osnabrück, Germany. Reproducible research, data science and plant biology are my main interests and these are the topics I will mostly write about.
+
+If you happen to be interested in these topics too, come along on my journey and let's see where it takes us.
+
+## Structure
+
+
+
+## Meet the team
+
+Fortunately, we don't have to travel alone. I'm lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="40%"}
+
+![](images/neinhorn/neinhorn-512.png)
+
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="40%"}
+<strong class="co-name">The Neinhorn</strong>
+
+Mixup of "Nein" (german for "No") and "Einhorn" (german for "Unicorn") 
+The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by *Marc-Uwe Klings Book* "Das NEINhorn" @kling2021
+
+Das NEINhorn, Icon created by *Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons [(Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="40%"}
+
+![](images/mole.png)
+
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width=50%"}
+<strong class="co-name">The Maulwurf</strong>
+
+Maulwurf is german for "Mole" the german word Maul*en* also translates to "grouse" and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.
+
+The Mole, Creative Commons [(Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/){#fig-mole}
+
+:::
+:::
