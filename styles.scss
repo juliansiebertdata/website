@@ -114,6 +114,18 @@ a[href="https://seedforward.com/de/home/"] {
     }
 }
 
+// change appearance of definition lists
+
+dt {
+    color: $darker-green;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1.1px;
+    font-family: Poppins;
+
+}
+
+
 // change appearance of worker names
 .co-name {
     color: $darker-green;
