@@ -47,7 +47,7 @@ website:
 format:
   html:
     theme: [cosmo, styles.scss]
-    mainfont: "Roboto"
+    mainfont: "Ubuntu"
     toc: true
     toc-title: "On this page"
     toc-expand: true

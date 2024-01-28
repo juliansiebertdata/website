@@ -19,3 +19,12 @@ https://allisonhorst.com/everything-else
 
 
 ## Forms of Data
+
+
+## Get Data
+
+https://github.com/awesomedata/awesome-public-datasets
+
+https://datasciencebox.org/02-project
+
+https://dataverse.harvard.edu/dataverse/harvard/?q=yield+potential

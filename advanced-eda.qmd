@@ -16,3 +16,5 @@ Document for Jochen. (boxplot) aufarbeiten
 ### Confounder Analysis and the Simpson`s Paradox
 
 Folien von M. Rundel  https://datasciencebox.org/02-exploring-data
+
+
