@@ -19,5 +19,14 @@
   },
   "advanced-eda.qmd": {
     "advanced-eda.html": "b0b2a610"
+  },
+  "communicate-eda.qmd": {
+    "communicate-eda.html": "629bd29c"
+  },
+  "posts/2024-01-21-webR/webr.qmd": {
+    "webr.html": "f20d558c"
+  },
+  "posts/2024-01-27-revealjs/revealjs.qmd": {
+    "revealjs.html": "a214b915"
   }
 }
