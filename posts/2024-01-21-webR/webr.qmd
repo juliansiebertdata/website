@@ -3,7 +3,7 @@ title: "New Horizons | Using WebR"
 description: "We will make WebR work to run R directly inside your browser."
 author:
   - name: Julian Siebert
-    url: https://juliansiebert.github.io/website/ # (your website)
+    url: https://juliansiebertdata.github.io/website/ # (your website)
     #orcid: 0000-0000-0000-0000 # (if available)
     affiliation: Working Student @ Seedforward
     #affiliation-url: https://seedforward.de/ # (company website)
@@ -11,7 +11,7 @@ date: 01-27-2024
 date-modified: 01-27-2024
 categories: [WebR, Quarto, R] # self-defined categories (hash tags)
 citation: 
-  url: https://juliansiebert.github.io/website/posts/2024-01-21-my-blog-post/ 
+  url: https://juliansiebertdata.github.io/website/posts/2024-01-21-webR/webr.html
 image: images/webR-vignette.png # (image of your blog post)
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 sidebar: false
