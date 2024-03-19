@@ -1,6 +1,6 @@
 ---
 title: "" # if using a built-in template, this title appears under your photo
-image: "images/js.jpg" # great spot for your professional headshot :) 
+image: "images/foto_js_grey.jpg" # great spot for your professional headshot :) 
 toc: false # remove "On this page" table of contents
 sidebar: false # remove sidebar from this page
 

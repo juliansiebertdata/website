@@ -15,7 +15,7 @@ website:
       type: textbox
   sidebar:
     style: "floating"
-    logo: "images/outlier-logo.png"
+    logo: "images/outlier-favicon.png"
     title: "Agricultural Research"
     contents: 
       - href: index.qmd

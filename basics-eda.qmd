@@ -9,3 +9,4 @@ In this section we will start our journey to bring light inside the world of dat
 Luckily we have a toolset at our hand called the grammar of graphics (ggplot). 
 
  We will use the [tidyverse](https://www.tidyverse.org/) suite of packages for this. The tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The tidyverse is designed to make it easy to install and load core packages from the tidyverse in a single command. The packages in the tidyverse have been designed to work together naturally. This means that you can fluidly move from one package to another. For example, you might start with `dplyr` to manipulate your data, then `ggplot2` to plot it, then `gganimate` to animate it.
+
