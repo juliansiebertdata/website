@@ -59,11 +59,25 @@
     "text": "The WebR documentation gives examples on how to setup WebR for different deployment scenarios like RevealJS, Websites on GitHub Pages, etc.\nThere is also a example Website which shows how to setup WebR for a Website. The source code can be found in the GitHub Repository.\nFor troubleshooting later on here\n\n\n\n\n\n\nCreate Link in Powershell\n\n\n\nThe code provide by the Coatless Professor is for Linux and MacOS. If you want to use it in Windows you have to change the code to cmd /c mklink /D _extensions ..\\_extensions assuming you are in the root/docs folder of your quarto project."
   },
   {
+    "objectID": "get-data.html",
+    "href": "get-data.html",
+    "title": "",
+    "section": "",
+    "text": "https://statsandr.com/blog/web-scraping-in-r/#web-scraping-in-r"
+  },
+  {
+    "objectID": "get-data.html#webscraping",
+    "href": "get-data.html#webscraping",
+    "title": "",
+    "section": "",
+    "text": "https://statsandr.com/blog/web-scraping-in-r/#web-scraping-in-r"
+  },
+  {
     "objectID": "communicate-eda.html",
     "href": "communicate-eda.html",
     "title": "",
     "section": "",
-    "text": "Showing uncertainty in the data\nPresentation and storytelling\nAudience\nUnit charts, ISOTYPE\nhttps://www.youtube.com/watch?v=Wb6xKQRtWig&list=PLOHIJAFwtkEdVyLBLiOYEXJdCZJmXsvdG&index=4\nhttps://journals.sagepub.com/doi/10.1177/15291006211051956\nhttps://media.eagereyes.org/papers/2017/Kosara-EuroVis-2017.pdf\n\n\n\n Back to top"
+    "text": "Showing uncertainty in the data\nPresentation and storytelling\nAudience\nUnit charts, ISOTYPE\nhttps://www.youtube.com/watch?v=Wb6xKQRtWig&list=PLOHIJAFwtkEdVyLBLiOYEXJdCZJmXsvdG&index=4\nhttps://journals.sagepub.com/doi/10.1177/15291006211051956\nhttps://media.eagereyes.org/papers/2017/Kosara-EuroVis-2017.pdf\nhttps://www.mjskay.com/papers/infovis2020-uncertainty-decision-making.pdf\n\nPDF´s\nhttps://nrennie.rbind.io/\n\n\n\n\n Back to top"
   },
   {
     "objectID": "basic-tidydata.html",
@@ -155,7 +169,7 @@
     "href": "about.html#meet-the-team",
     "title": "Welcome",
     "section": "Meet the team",
-    "text": "Meet the team\nFortunately, we don’t have to travel alone. I’m lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)",
+    "text": "Meet the team\nFortunately, we don’t have to travel alone. I’m lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)\n\n\n\nStorage\n\nStatistical Learning in R with the video Courses here\nStorytelling with Data\nexperimental designs",
     "crumbs": [
       "About"
     ]
@@ -165,7 +179,7 @@
     "href": "advanced-eda.html",
     "title": "Stumbling blocks",
     "section": "",
-    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data",
+    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data\nSimpsons Paradox\n\n\n\n\n\nNanoplots\n\n\n\n\nTable with gt, nanoplots which is shown here\nTable with Plots inside",
     "crumbs": [
       "First Steps",
       "Stumbling blocks"
@@ -176,7 +190,7 @@
     "href": "advanced-eda.html#what-are-you-hiding",
     "title": "Stumbling blocks",
     "section": "",
-    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data",
+    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data\nSimpsons Paradox\n\n\n\n\n\nNanoplots\n\n\n\n\nTable with gt, nanoplots which is shown here\nTable with Plots inside",
     "crumbs": [
       "First Steps",
       "Stumbling blocks"
@@ -192,6 +206,13 @@
       "First Steps",
       "There was light"
     ]
+  },
+  {
+    "objectID": "gene-analysis.html",
+    "href": "gene-analysis.html",
+    "title": "",
+    "section": "",
+    "text": "Ressources Gene Analysis\n\nhttp://rafalab.dfci.harvard.edu/pages/research.html\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",

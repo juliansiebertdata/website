@@ -28,5 +28,9 @@ citations-hover: true
 - https://emilhvitfeldt.com/post/slidecraft-7-tips-and-tricks/
 - https://emilhvitfeldt.com/post/slidecraft-scss-themes/
 - https://emilhvitfeldt.com/post/slidecraft-scss-themes/
+- https://github.com/mcanouil/quarto-revealjs-coeos
+- https://github.com/quarto-ext
+- https://quarto.org/docs/reference/formats/presentations/revealjs.html
+- https://github.com/coatless/quarto-webr/tree/main/examples/revealjs
 
 {{< video https://www.youtube.com/watch?v=SAi8-P49F2Y >}}

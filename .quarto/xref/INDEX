@@ -28,5 +28,14 @@
   },
   "posts/2024-01-27-revealjs/revealjs.qmd": {
     "revealjs.html": "a214b915"
+  },
+  "get-data.qmd": {
+    "get-data.html": "d6a30565"
+  },
+  "posts/2024-01-27-revealjs/gene-analysis.qmd": {
+    "gene-analysis.html": "146d2884"
+  },
+  "gene-analysis.qmd": {
+    "gene-analysis.html": "21d77aaf"
   }
 }

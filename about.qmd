@@ -84,3 +84,10 @@ The Mole, Creative Commons [(Attribution 3.0 Unported)](https://creativecommons.
 
 :::
 :::
+
+
+### Storage
+
+- [Statistical Learning in R](https://www.statlearning.com/online-courses) with the video Courses [here](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e)
+- [Storytelling with Data](https://tellingstorieswithdata.com/)
+- [experimental designs](https://www.youtube.com/@statstree9205/videos)
