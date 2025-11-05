@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  title: "![](/images/outlier-favicon.png){height=2em}"
   repo-url: https://github.com/juliansiebertdata/website
   repo-actions: issue
   repo-subdir: "docs"
@@ -11,28 +12,22 @@ website:
   favicon: "images/outlier-favicon.png"
   open-graph: true
   search:
-      location: sidebar
+      location: navbar
       type: textbox
+  navbar:
+    right:
+      - text: "Home"
+        href: index.qmd
+      - sidebar:research
+      - text: "CV"
+        href: "mydocuments/cv-juliansiebert.pdf"
   sidebar:
-    style: "floating"
-    logo: "images/outlier-favicon.png"
-    title: "Agricultural Research"
-    contents: 
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
-      - section: "A new World"
-        contents:
-          - href: basic-tidydata.qmd
-            text: The Planet of Data
-      - section: "First Steps"
-        contents:
-          - href: basics-eda.qmd
-            text: There was light
-          - href: advanced-eda.qmd
-            text: Stumbling blocks
-      - posts.qmd
+    - id: research
+      title: "Agricultural Research"
+      style: "floating"
+      contents:
+        - href: about.qmd
+          text: "Your first day."
   page-footer: 
     left: "Agricultural Research is a web-project by Julian Siebert." 
     right: 

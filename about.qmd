@@ -7,7 +7,7 @@ bibliography: references.bib
 
 Here we are. My first Quarto website. For now, I'm going to use it as a place to put my notes and thoughts, to save them for later and share them with you. I'm not sure what I'll do with it in the future, but I'm sure I'll figure it out as I go.
 
-If you have stumbled upon this site somehow, I hope you find something useful. But keep in mind that this is a work in progress. Right now I am writing my bachelor thesis in Data Science for Biology. So there's still a lot to learn and I'll make mistakes along the way.
+If you have stumbled upon this site somehow, I hope you find something useful. But keep in mind that this is a work in progress. Right now I am focussing on my master's degree in Plant Sciences. So there's still a lot to learn and I'll make mistakes along the way.
 
 As I'm not a native English speaker, there will be a lot of mistakes in my writing. I'm sorry for that. I'm trying to improve my English and I hope you can bear with me.
 
@@ -15,7 +15,7 @@ The program I use to write this is called [Quarto](https://quarto.org/). It's a 
 
 ## Topics
 
-I am currently working as a working student in the R&D team of a young biotech start-up. I'm also a student of plant sciences at the University of Applied Sciences in Osnabrück, Germany. Reproducible research, data science and plant biology are my main interests and these are the topics I will mostly write about.
+ Reproducible research, data science and plant biology are my main interests and these are the topics I will mostly write about.
 
 If you happen to be interested in these topics too, come along on my journey and let's see where it takes us.
 
@@ -26,20 +26,12 @@ The Website is structured into different sections and chapters. You can navigate
 About
 : This is the section you are currently reading. It contains some general information about the idea behind and the structure of this website.
 
-A new world
-: In this section we will explore some of the basics of working with data in various forms. It is by no means a complete guide to data science, but it will enable us to work with real data. For example, the spreadsheet your colleague sends you to analyse.
-(If you are just starting out, I highly recommend the book [R for Data Science](https://r4ds.hadley.nz/) by H. Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund) @hadley2024
-
-First Steps
-: Having explored the world of data, we make our first steps towards extracting meaningful information from it. We will learn how to use the R programming language to analyse data and create visualisations. Therefor we use the R package `tidyverse`, a collection of packages designed for data science. In the second part of this section, we'll explore what can happen if we don't pay attention to the details of our data, and how we can avoid these problems.
-
-Expeditions
-: This is where I discuss topics and particular use cases that I stumble upon. It is a collection of notes, real world examples and thoughts on various topics in a blog format.
-
+Agricultural Research
+: This section is dedicated to exploring various aspects of agricultural research, including methodologies, case studies, and the latest advancements in the field. As a narrative thread, we will follow the journey of a newly hired researcher as she/he navigates the challenges and triumphs of conducting impactful research in a young agricultural biotechnology company.
 
 ## Meet the team
 
-Fortunately, we don't have to travel alone. I'm lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:
+Fortunately, our main character doesnt have to navigate this journey alone. She/He is lucky to have a great team of people around her/him to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:
 
 ------------------------------------------------------------------------
 

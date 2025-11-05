@@ -1,147 +1,19 @@
 [
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Expeditions",
-    "section": "",
-    "text": "New Horizons | Using WebR\n\n\n\nWebR\n\n\nQuarto\n\n\nR\n\n\n\nWe will make WebR work to run R directly inside your browser.\n\n\n\nJulian Siebert\n\n\nJan 27, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-    "crumbs": [
-      "Expeditions"
-    ]
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html",
-    "href": "posts/2024-01-21-webR/webr.html",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "In this Blogpost I will show you how to use WebR inside your Quarto documents. WebR is a technology that allows us to run R directly inside our browser. This is a great way to share our analysis with others without the need to install R on their machine. They just need a browser and an internet connection. (It runs even on a smartphone)\nTo start and install WebR inside our Quarto document use the very short manual at the GitHub page of Coatless Professor.\nHe´s even writing a Book about WebR in Quarto right now which you can find here.\nOr you watch this Youtube Video from the Coatless Professor.\n\n\n\n\n\n\nVideo 1: “WebR R in the Browser” by the Coatless Professor.\n\n\n\n\n\n\n\n\nDefinition: WebR technology.\n\n\nWebR uses a technology called WebAssembly to run R inside the browser. It´s basically a very fast and small virtual machine. Using this your browser sets up a instance of R and runs your code inside this instance. We will discuss Pros and Cons later.\n\n\n\n\nI recommend taking the steps above to install WebR in your Quarto project. While this Blog Post and the Video might become outdated, the GitHub page of the Coatless Professor will probably always be up to date. I will store the information here for the sake of completeness.\nFirst we need to install the quarto-webr extension for Quarto inside our Quarto Project. This step needs to be repeated for every Quarto Project you want to use WebR in. Run the following Code inside your Terminal.\n\nquarto add coatless/quarto-webr\n\nNow we add the following lines to the YAML header of our Quarto document. Alternatively you can specify this in your “_quarto.yml” file to make WebR available for all documents inside your Quarto Project.\n\n\nyour_file.qmd\n\n---\nengine: knitr\nfilters:\n  - webr\n---\n\nIf you followed the examples above you should be able to use the following code chunk to load the mtcars dataset and fit the mpg against the wt variable using base R.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nBeacause WebR uses a technology called WebAssembly you cannot simply use every package inside the R ecosystem easily. But you can have a look at the WebR Package Repository to see which packages are available.\nIf you want to use a package inside WebR it is as easy as adding the package name to the webr field in the YAML header of your Quarto document.\n\n\nyour_file.qmd\n\n---\nformat: html\nengine: knitr\nwebr: \n    packages: [\"dplyr\", \"ggplot2\"]\nfilters:\n  - webr\n---\n\nYou could also use the webr::install() function to install packages inside your Quarto document. But the above method is to be preferred because it is faster and more reliable. See here for more information.\nBut if you want to use a package in only one code cell it can be more efficient to make a inline call like this.\n\nwebr::install(\"dplyr\")\n\nAnd then use the package in the next code cell.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWebR provides a way to hide code cells and execute them later. This can be useful if you want to hide the code cells from the user to focus on the analysis or output.\nTherefor you specify a quarto-webr cell option called context. There are three different contexts available.\n\n\n\nTable 1: Context Options for WebR\n\n\n\n\n\n\n\n\n\n\nquarto-webr Context\nQuarto Cell Option\nDescription\n\n\n\n\ninteractive (default)\ninclude: true\nShow both code and results\n\n\noutput\necho: false\nSuppress showing code, but display the results\n\n\nsetup\ninclude: false\nSuppress showing both code and results\n\n\n\n\n\n\nFor example you want to load packages and datasets in the background without showing to not distract the reader from the analysis.\n```{webr-r}\n#| context: setup\nwebr::install(\"palmerpenguins\")\nlibrary(palmerpenguins)\n```\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThis is how you can execute the Code inside the Code Cells provided by WebR.\n\nRun selected code (Per Line execution):\n\nmacOS: ⌘ + ↩︎/Return\nWindows/Linux: strg + ↩︎/Enter\n\nTo run the entire code cell, you can simply click the “Run code” button, or use the keyboard shortcut:\n\nShift + ↩︎\n\n\n\n\n\n\nWe can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto Documents. This is how we can do it.\n&lt;style&gt;\n.slide-deck {\n    border: 3px solid #dee2e6;\n    width: 100%;\n    height: 475px;\n}\n&lt;/style&gt;\n\n&lt;div&gt;\n```{=html}\n&lt;iframe class=\"slide-deck\" src=\"path/to/presentation/\"&gt;&lt;/iframe&gt;\n```\n&lt;/div&gt;\n\n\n\n\n\n\nImportant\n\n\n\nDon´t embed an WebR Presentation inside a WebR Document. This will lead to strange behaviour. There should always be only one WebR instance per document.\n\n\n\n\n\nWebR needs to communicate between the browser and the R instance. There are several available. Each with there own set of advantages and disadvantages.\nBecause i deploy this website using github pages i have to use the channel-type: \"post-message\" which is actually less secure and slower than the default channel-type: \"shared-array\".\n\n\nyour_file.qmd\n\n---\ntitle: \"Setting Up webR to use the PostMessage Channel\"\nformat: html\nwebr:\n  channel-type: \"post-message\"\nfilters:\n- webr\n---\n\n\n\n\nThe WebR documentation gives examples on how to setup WebR for different deployment scenarios like RevealJS, Websites on GitHub Pages, etc.\nThere is also a example Website which shows how to setup WebR for a Website. The source code can be found in the GitHub Repository.\nFor troubleshooting later on here\n\n\n\n\n\n\nCreate Link in Powershell\n\n\n\nThe code provide by the Coatless Professor is for Linux and MacOS. If you want to use it in Windows you have to change the code to cmd /c mklink /D _extensions ..\\_extensions assuming you are in the root/docs folder of your quarto project."
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html#setup-webr-in-quarto",
-    "href": "posts/2024-01-21-webR/webr.html#setup-webr-in-quarto",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "I recommend taking the steps above to install WebR in your Quarto project. While this Blog Post and the Video might become outdated, the GitHub page of the Coatless Professor will probably always be up to date. I will store the information here for the sake of completeness.\nFirst we need to install the quarto-webr extension for Quarto inside our Quarto Project. This step needs to be repeated for every Quarto Project you want to use WebR in. Run the following Code inside your Terminal.\n\nquarto add coatless/quarto-webr\n\nNow we add the following lines to the YAML header of our Quarto document. Alternatively you can specify this in your “_quarto.yml” file to make WebR available for all documents inside your Quarto Project.\n\n\nyour_file.qmd\n\n---\nengine: knitr\nfilters:\n  - webr\n---\n\nIf you followed the examples above you should be able to use the following code chunk to load the mtcars dataset and fit the mpg against the wt variable using base R.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html#using-packages",
-    "href": "posts/2024-01-21-webR/webr.html#using-packages",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "Beacause WebR uses a technology called WebAssembly you cannot simply use every package inside the R ecosystem easily. But you can have a look at the WebR Package Repository to see which packages are available.\nIf you want to use a package inside WebR it is as easy as adding the package name to the webr field in the YAML header of your Quarto document.\n\n\nyour_file.qmd\n\n---\nformat: html\nengine: knitr\nwebr: \n    packages: [\"dplyr\", \"ggplot2\"]\nfilters:\n  - webr\n---\n\nYou could also use the webr::install() function to install packages inside your Quarto document. But the above method is to be preferred because it is faster and more reliable. See here for more information.\nBut if you want to use a package in only one code cell it can be more efficient to make a inline call like this.\n\nwebr::install(\"dplyr\")\n\nAnd then use the package in the next code cell.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html#hiding-and-executing-code",
-    "href": "posts/2024-01-21-webR/webr.html#hiding-and-executing-code",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "WebR provides a way to hide code cells and execute them later. This can be useful if you want to hide the code cells from the user to focus on the analysis or output.\nTherefor you specify a quarto-webr cell option called context. There are three different contexts available.\n\n\n\nTable 1: Context Options for WebR\n\n\n\n\n\n\n\n\n\n\nquarto-webr Context\nQuarto Cell Option\nDescription\n\n\n\n\ninteractive (default)\ninclude: true\nShow both code and results\n\n\noutput\necho: false\nSuppress showing code, but display the results\n\n\nsetup\ninclude: false\nSuppress showing both code and results\n\n\n\n\n\n\nFor example you want to load packages and datasets in the background without showing to not distract the reader from the analysis.\n```{webr-r}\n#| context: setup\nwebr::install(\"palmerpenguins\")\nlibrary(palmerpenguins)\n```\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThis is how you can execute the Code inside the Code Cells provided by WebR.\n\nRun selected code (Per Line execution):\n\nmacOS: ⌘ + ↩︎/Return\nWindows/Linux: strg + ↩︎/Enter\n\nTo run the entire code cell, you can simply click the “Run code” button, or use the keyboard shortcut:\n\nShift + ↩︎"
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html#webr-revealjs-slides",
-    "href": "posts/2024-01-21-webR/webr.html#webr-revealjs-slides",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "We can also embed a WebR RevealJS Slide inside a Quarto Website or other Quarto Documents. This is how we can do it.\n&lt;style&gt;\n.slide-deck {\n    border: 3px solid #dee2e6;\n    width: 100%;\n    height: 475px;\n}\n&lt;/style&gt;\n\n&lt;div&gt;\n```{=html}\n&lt;iframe class=\"slide-deck\" src=\"path/to/presentation/\"&gt;&lt;/iframe&gt;\n```\n&lt;/div&gt;\n\n\n\n\n\n\nImportant\n\n\n\nDon´t embed an WebR Presentation inside a WebR Document. This will lead to strange behaviour. There should always be only one WebR instance per document."
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html#communication-channels",
-    "href": "posts/2024-01-21-webR/webr.html#communication-channels",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "WebR needs to communicate between the browser and the R instance. There are several available. Each with there own set of advantages and disadvantages.\nBecause i deploy this website using github pages i have to use the channel-type: \"post-message\" which is actually less secure and slower than the default channel-type: \"shared-array\".\n\n\nyour_file.qmd\n\n---\ntitle: \"Setting Up webR to use the PostMessage Channel\"\nformat: html\nwebr:\n  channel-type: \"post-message\"\nfilters:\n- webr\n---"
-  },
-  {
-    "objectID": "posts/2024-01-21-webR/webr.html#deployment",
-    "href": "posts/2024-01-21-webR/webr.html#deployment",
-    "title": "New Horizons | Using WebR",
-    "section": "",
-    "text": "The WebR documentation gives examples on how to setup WebR for different deployment scenarios like RevealJS, Websites on GitHub Pages, etc.\nThere is also a example Website which shows how to setup WebR for a Website. The source code can be found in the GitHub Repository.\nFor troubleshooting later on here\n\n\n\n\n\n\nCreate Link in Powershell\n\n\n\nThe code provide by the Coatless Professor is for Linux and MacOS. If you want to use it in Windows you have to change the code to cmd /c mklink /D _extensions ..\\_extensions assuming you are in the root/docs folder of your quarto project."
-  },
-  {
-    "objectID": "get-data.html",
-    "href": "get-data.html",
-    "title": "",
-    "section": "",
-    "text": "https://statsandr.com/blog/web-scraping-in-r/#web-scraping-in-r"
-  },
-  {
-    "objectID": "get-data.html#webscraping",
-    "href": "get-data.html#webscraping",
-    "title": "",
-    "section": "",
-    "text": "https://statsandr.com/blog/web-scraping-in-r/#web-scraping-in-r"
-  },
-  {
-    "objectID": "communicate-eda.html",
-    "href": "communicate-eda.html",
-    "title": "",
-    "section": "",
-    "text": "Showing uncertainty in the data\nPresentation and storytelling\nAudience\nUnit charts, ISOTYPE\nhttps://www.youtube.com/watch?v=Wb6xKQRtWig&list=PLOHIJAFwtkEdVyLBLiOYEXJdCZJmXsvdG&index=4\nhttps://journals.sagepub.com/doi/10.1177/15291006211051956\nhttps://media.eagereyes.org/papers/2017/Kosara-EuroVis-2017.pdf\nhttps://www.mjskay.com/papers/infovis2020-uncertainty-decision-making.pdf\n\nPDF´s\nhttps://nrennie.rbind.io/\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "basic-tidydata.html",
-    "href": "basic-tidydata.html",
-    "title": "The Planet of Data",
-    "section": "",
-    "text": "Data comes in many shapes and forms (yes even colors). In this section we will get into the world of data to explore and understand it.\nThe most common living place of data you will come across is the spreadsheet. Since the introduction of the spreadsheet in the 1980s, it has become the most common way to store data. Sadly for us, and the data itself, it is also the most common way to store data in a way that is not useful for analysis. We will get into that later.",
-    "crumbs": [
-      "A new World",
-      "The Planet of Data"
-    ]
-  },
-  {
-    "objectID": "basic-tidydata.html#kind-of-data",
-    "href": "basic-tidydata.html#kind-of-data",
-    "title": "The Planet of Data",
-    "section": "Kind of Data",
-    "text": "Kind of Data\nhttps://allisonhorst.com/everything-else",
-    "crumbs": [
-      "A new World",
-      "The Planet of Data"
-    ]
-  },
-  {
-    "objectID": "basic-tidydata.html#habitats-of-data",
-    "href": "basic-tidydata.html#habitats-of-data",
-    "title": "The Planet of Data",
-    "section": "Habitats of Data",
-    "text": "Habitats of Data",
-    "crumbs": [
-      "A new World",
-      "The Planet of Data"
-    ]
-  },
-  {
-    "objectID": "basic-tidydata.html#forms-of-data",
-    "href": "basic-tidydata.html#forms-of-data",
-    "title": "The Planet of Data",
-    "section": "Forms of Data",
-    "text": "Forms of Data",
-    "crumbs": [
-      "A new World",
-      "The Planet of Data"
-    ]
-  },
-  {
-    "objectID": "basic-tidydata.html#get-data",
-    "href": "basic-tidydata.html#get-data",
-    "title": "The Planet of Data",
-    "section": "Get Data",
-    "text": "Get Data\nhttps://github.com/awesomedata/awesome-public-datasets\nhttps://datasciencebox.org/02-project\nhttps://dataverse.harvard.edu/dataverse/harvard/?q=yield+potential",
-    "crumbs": [
-      "A new World",
-      "The Planet of Data"
-    ]
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "![](/images/outlier-favicon.png){height=2em}",
+    "section": "About Me",
+    "text": "About Me\nI’m Julian Siebert, a Plant Technologist (B.Sc.) currently pursuing my Master’s degree in Applied Plant Sciences with a specialization in Biotechnology at Osnabrück University of Applied Sciences. My academic journey has been driven by a passion for combining biological knowledge with modern technology and data science.\nMy professional experience spans research and development positions at innovative agricultural companies, where I’ve focused on managing field and greenhouse trials, automation, data pipeline development, and statistical modeling with the goal of making research more efficient, reproducible, and impactful."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Welcome",
     "section": "",
-    "text": "Knowledge is an unending adventure at the edge of uncertainty. - Jacob Bronowski\nHere we are. My first Quarto website. For now, I’m going to use it as a place to put my notes and thoughts, to save them for later and share them with you. I’m not sure what I’ll do with it in the future, but I’m sure I’ll figure it out as I go.\nIf you have stumbled upon this site somehow, I hope you find something useful. But keep in mind that this is a work in progress. Right now I am writing my bachelor thesis in Data Science for Biology. So there’s still a lot to learn and I’ll make mistakes along the way.\nAs I’m not a native English speaker, there will be a lot of mistakes in my writing. I’m sorry for that. I’m trying to improve my English and I hope you can bear with me.\nThe program I use to write this is called Quarto. It’s a great tool for writing reproducible documents, presentations, websites, manuscripts and more. If you want to know more about Quarto, check out the great documentation website.",
+    "text": "Knowledge is an unending adventure at the edge of uncertainty. - Jacob Bronowski\nHere we are. My first Quarto website. For now, I’m going to use it as a place to put my notes and thoughts, to save them for later and share them with you. I’m not sure what I’ll do with it in the future, but I’m sure I’ll figure it out as I go.\nIf you have stumbled upon this site somehow, I hope you find something useful. But keep in mind that this is a work in progress. Right now I am focussing on my master’s degree in Plant Sciences. So there’s still a lot to learn and I’ll make mistakes along the way.\nAs I’m not a native English speaker, there will be a lot of mistakes in my writing. I’m sorry for that. I’m trying to improve my English and I hope you can bear with me.\nThe program I use to write this is called Quarto. It’s a great tool for writing reproducible documents, presentations, websites, manuscripts and more. If you want to know more about Quarto, check out the great documentation website.",
     "crumbs": [
-      "About"
+      "Your first day."
     ]
   },
   {
@@ -149,9 +21,9 @@
     "href": "about.html#topics",
     "title": "Welcome",
     "section": "Topics",
-    "text": "Topics\nI am currently working as a working student in the R&D team of a young biotech start-up. I’m also a student of plant sciences at the University of Applied Sciences in Osnabrück, Germany. Reproducible research, data science and plant biology are my main interests and these are the topics I will mostly write about.\nIf you happen to be interested in these topics too, come along on my journey and let’s see where it takes us.",
+    "text": "Topics\nReproducible research, data science and plant biology are my main interests and these are the topics I will mostly write about.\nIf you happen to be interested in these topics too, come along on my journey and let’s see where it takes us.",
     "crumbs": [
-      "About"
+      "Your first day."
     ]
   },
   {
@@ -159,9 +31,9 @@
     "href": "about.html#structure",
     "title": "Welcome",
     "section": "Structure",
-    "text": "Structure\nThe Website is structured into different sections and chapters. You can navigate through the chapters using the navigation bar on the left side of the page. Fell free to explore and contact me if you have any questions or suggestions.\n\nAbout\n\nThis is the section you are currently reading. It contains some general information about the idea behind and the structure of this website.\n\nA new world\n\nIn this section we will explore some of the basics of working with data in various forms. It is by no means a complete guide to data science, but it will enable us to work with real data. For example, the spreadsheet your colleague sends you to analyse. (If you are just starting out, I highly recommend the book R for Data Science by H. Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund) Hadley Wickham (n.d.)\n\nFirst Steps\n\nHaving explored the world of data, we make our first steps towards extracting meaningful information from it. We will learn how to use the R programming language to analyse data and create visualisations. Therefor we use the R package tidyverse, a collection of packages designed for data science. In the second part of this section, we’ll explore what can happen if we don’t pay attention to the details of our data, and how we can avoid these problems.\n\nExpeditions\n\nThis is where I discuss topics and particular use cases that I stumble upon. It is a collection of notes, real world examples and thoughts on various topics in a blog format.",
+    "text": "Structure\nThe Website is structured into different sections and chapters. You can navigate through the chapters using the navigation bar on the left side of the page. Fell free to explore and contact me if you have any questions or suggestions.\n\nAbout\n\nThis is the section you are currently reading. It contains some general information about the idea behind and the structure of this website.\n\nAgricultural Research\n\nThis section is dedicated to exploring various aspects of agricultural research, including methodologies, case studies, and the latest advancements in the field. As a narrative thread, we will follow the journey of a newly hired researcher as she/he navigates the challenges and triumphs of conducting impactful research in a young agricultural biotechnology company.",
     "crumbs": [
-      "About"
+      "Your first day."
     ]
   },
   {
@@ -169,69 +41,9 @@
     "href": "about.html#meet-the-team",
     "title": "Welcome",
     "section": "Meet the team",
-    "text": "Meet the team\nFortunately, we don’t have to travel alone. I’m lucky to have a great team of people around me to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)\n\n\n\nStorage\n\nStatistical Learning in R with the video Courses here\nStorytelling with Data\nexperimental designs",
+    "text": "Meet the team\nFortunately, our main character doesnt have to navigate this journey alone. She/He is lucky to have a great team of people around her/him to explore basic and advanced topics in data science and plant biology. Let me introduce them to you:\n\n\n\n\n\n\n\nThe Neinhorn\nMixup of “Nein” (german for “No”) and “Einhorn” (german for “Unicorn”) The Neinhorn (NO!Unicorn) is a creative and curious creature which likes to behave different than others. We will meet it along our journey and it might make things difficult for us from time to time. Inspired by Marc-Uwe Klings Book “Das NEINhorn” Kling (2021)\nDas NEINhorn, Icon created by Rafiico Creative Studio Co., Ltd. and licensed under the Creative Commons (Attribution 3.0 Unported)\n\n\n\n\n\n\n\n\n\nThe Maulwurf\nMaulwurf is german for “Mole” the german word Maulen also translates to “grouse” and this describes our Maulwurf pretty well. It likes to put his nose deep into every topic and wants to know how things work and why they work the way they do. It also grouses a lot if we make shortcuts to get things done.\nThe Mole, Creative Commons (Attribution 3.0 Unported)\n\n\n\nStorage\n\nStatistical Learning in R with the video Courses here\nStorytelling with Data\nexperimental designs",
     "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "advanced-eda.html",
-    "href": "advanced-eda.html",
-    "title": "Stumbling blocks",
-    "section": "",
-    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data\nSimpsons Paradox\n\n\n\n\n\nNanoplots\n\n\n\n\nTable with gt, nanoplots which is shown here\nTable with Plots inside",
-    "crumbs": [
-      "First Steps",
-      "Stumbling blocks"
-    ]
-  },
-  {
-    "objectID": "advanced-eda.html#what-are-you-hiding",
-    "href": "advanced-eda.html#what-are-you-hiding",
-    "title": "Stumbling blocks",
-    "section": "",
-    "text": "https://allisonhorst.com/everything-else\nDocument for Jochen. (boxplot) aufarbeiten\n\n\n\n\n\n\nFolien von M. Rundel https://datasciencebox.org/02-exploring-data\nSimpsons Paradox\n\n\n\n\n\nNanoplots\n\n\n\n\nTable with gt, nanoplots which is shown here\nTable with Plots inside",
-    "crumbs": [
-      "First Steps",
-      "Stumbling blocks"
-    ]
-  },
-  {
-    "objectID": "basics-eda.html",
-    "href": "basics-eda.html",
-    "title": "There was light",
-    "section": "",
-    "text": "In this section we will start our journey to bring light inside the world of data. We will do this by performing some basic data analysis and visualization. A step which is offen referred to as exploratory data analysis (EDA).\nLuckily we have a toolset at our hand called the grammar of graphics (ggplot).\nWe will use the tidyverse suite of packages for this. The tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. The tidyverse is designed to make it easy to install and load core packages from the tidyverse in a single command. The packages in the tidyverse have been designed to work together naturally. This means that you can fluidly move from one package to another. For example, you might start with dplyr to manipulate your data, then ggplot2 to plot it, then gganimate to animate it.\n\n\n\n Back to top",
-    "crumbs": [
-      "First Steps",
-      "There was light"
-    ]
-  },
-  {
-    "objectID": "gene-analysis.html",
-    "href": "gene-analysis.html",
-    "title": "",
-    "section": "",
-    "text": "Ressources Gene Analysis\n\nhttp://rafalab.dfci.harvard.edu/pages/research.html\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "I am Student at the University of Applied Sciences in Osnabrück, Germany with a focus on Data Science for biological research where I am currently writing on my Bachelor Thesis in the field of Quantile Regression.\nProfessionally, I am a Working Student at a young biotechnology company called SeedForward GmbH where i support the F&E Team with statistics and field trial management.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#julian-siebert",
-    "href": "index.html#julian-siebert",
-    "title": "",
-    "section": "",
-    "text": "I am Student at the University of Applied Sciences in Osnabrück, Germany with a focus on Data Science for biological research where I am currently writing on my Bachelor Thesis in the field of Quantile Regression.\nProfessionally, I am a Working Student at a young biotechnology company called SeedForward GmbH where i support the F&E Team with statistics and field trial management.",
-    "crumbs": [
-      "Home"
+      "Your first day."
     ]
   }
 ]

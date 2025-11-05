@@ -19,15 +19,16 @@ about:
       text: Email
       href: mailto:ju.siebert@live.de
 
-include-in-header: "web-elements/header.html"
 resources: 
   - mydocuments/cv-juliansiebert.pdf
 ---
 
 ## Julian Siebert
 
-I am Student at the University of Applied Sciences in Osnabrück, Germany with a focus on Data Science for biological research where I am currently writing on my Bachelor Thesis in the field of Quantile Regression.
+## About Me
 
-Professionally, I am a Working Student at a young biotechnology company called [SeedForward GmbH](https://www.seedforward.de) where i support the F&E Team with statistics and field trial management.<br>
+I'm Julian Siebert, a Plant Technologist (B.Sc.) currently pursuing my Master's degree in Applied Plant Sciences with a specialization in Biotechnology at Osnabrück University of Applied Sciences. My academic journey has been driven by a passion for combining biological knowledge with modern technology and data science.
+
+My professional experience spans research and development positions at innovative agricultural companies, where I've focused on managing field and greenhouse trials, automation, data pipeline development, and statistical modeling  with the goal of making research more efficient, reproducible, and impactful. <br>
 
 

@@ -37,5 +37,29 @@
   },
   "gene-analysis.qmd": {
     "gene-analysis.html": "21d77aaf"
+  },
+  "drafts/advanced-eda.qmd": {
+    "advanced-eda.html": "a61caade"
+  },
+  "drafts/basic-tidydata.qmd": {
+    "basic-tidydata.html": "c4fa0654"
+  },
+  "drafts/basics-eda.qmd": {
+    "basics-eda.html": "0497219f"
+  },
+  "drafts/communicate-eda.qmd": {
+    "communicate-eda.html": "11214792"
+  },
+  "drafts/gene-analysis.qmd": {
+    "gene-analysis.html": "3146fe5d"
+  },
+  "drafts/get-data.qmd": {
+    "get-data.html": "74a0a6a6"
+  },
+  "drafts/posts/2024-01-27-revealjs/revealjs.qmd": {
+    "revealjs.html": "56563064"
+  },
+  "drafts/posts.qmd": {
+    "posts.html": "8a5b12bb"
   }
 }
