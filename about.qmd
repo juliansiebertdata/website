@@ -27,7 +27,7 @@ About
 : This is the section you are currently reading. It contains some general information about the idea behind and the structure of this website.
 
 Agricultural Research
-: This section is dedicated to exploring various aspects of agricultural research, including methodologies, case studies, and the latest advancements in the field. As a narrative thread, we will follow the journey of a newly hired researcher as she/he navigates the challenges and triumphs of conducting impactful research in a young agricultural biotechnology company.
+: This section is dedicated to exploring various aspects of agricultural research, including methodologies, case studies, and the advancements in the field. As a narrative thread, we will follow the journey of a newly hired researcher as she/he navigates the challenges of conducting impactful research in a young agricultural biotechnology company.
 
 ## Meet the team
 
