@@ -42,6 +42,10 @@ $toc-font-style: bold; //
 
 /*-- scss:rules --*/
 
+#quarto-sidebar {
+    background-color: $cream;
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
     color: #858e79;
 }
@@ -69,6 +73,14 @@ main.content>section:first-of-type>h2:first-child {
 h3 {
     border-bottom: 1px solid #dee2e6;
     padding-bottom: .5rem;
+}
+
+.sidebar-menu-container .menu-text {
+    font-size: 1.2rem;
+    color: $darker-green;
+    font-weight: 600;
+    font-family: Poppins;
+    letter-spacing: 1px;
 }
 
 /* ------- class selectors ------- */

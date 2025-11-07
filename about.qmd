@@ -74,9 +74,22 @@ Maulwurf is german for "Mole" the german word Maul*en* also translates to "grous
 :::
 :::
 
+------------------------------------------------------------------------
 
-### Storage
+::: columns
+::: {.column width="40%"}
 
-- [Statistical Learning in R](https://www.statlearning.com/online-courses) with the video Courses [here](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e)
-- [Storytelling with Data](https://tellingstorieswithdata.com/)
-- [experimental designs](https://www.youtube.com/@statstree9205/videos)
+![](images/drone.png)
+
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width=50%"}
+<strong class="co-name">Skylar - The Drone</strong>
+
+Skylar is our tech expert equipped with deep knowledge about modern sensors and data acquisition technology. It really likes to explain and break down the mechanisms behind the technology we use in agricultural research.
+
+:::
+:::
